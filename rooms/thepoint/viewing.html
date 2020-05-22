@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Point Bookings</title>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+
+<body>
+    <div id="HeaderWrapper">
+        <div id="HeaderTop">
+            <a href="../../index.html">
+                <img src="../../img/Eastleigh_white_trans.png" alt="Eastleigh Logo" class="EastleighLogo">
+            </a>
+        </div>
+        <div id="HeaderMenu">
+            <div id="MenuWrapper">
+                <ul id="Menu">
+                    <li class="MenuItem">
+                        <a href="../lakeside/viewing.html">Lakeside Centre</a>
+                    </li>
+                    <li class="MenuItem">
+                        <a href="../ivcp/viewing.html">Itchen Valley Country Park</a>
+                    </li>
+                    <li class="MenuItem" id="ActiveItem">
+                        <a href="../thepoint/viewing.html">The Point</a>
+                    </li>
+                    <li class="MenuItem">
+                        <a href="../berrytheatre/viewing.html">Berry Theatre</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="Body">
+        <div id="SlideshowWrapper">
+            <div class="Slide">
+                <img src="../../img/slideshows/thepoint/1.jpg" alt="Slideshow Image 1">
+            </div>
+            <div class="Slide">
+                <img src="../../img/slideshows/thepoint/2.jpg" alt="Slideshow Image 2">
+            </div>
+            <div class="Slide">
+                <img src="../../img/slideshows/thepoint/3.jpg" alt="Slideshow Image 3">
+            </div>
+            <div class="Slide">
+                <img src="../../img/slideshows/thepoint/4.jpg" alt="Slideshow Image 4">
+            </div>
+            <div class="Slide">
+                <img src="../../img/slideshows/thepoint/5.jpg" alt="Slideshow Image 5">
+            </div>
+        </div>
+        <a class="previous" onclick="showSlide(-1)">&#10094;</a>
+        <a class="next" onclick="showSlide(1)">&#10095;</a>
+    </div>
+    <script>
+        var currentSlide = 1;
+        showSlide(0);
+
+        function showSlide(n) {
+            currentSlide = currentSlide + n;
+            var slideElements = document.getElementsByClassName("Slide");
+            if (currentSlide > slideElements.length) currentSlide = 1
+            else if (currentSlide < 1) currentSlide = slideElements.length;
+            for (i = 0; i < slideElements.length; i++) slideElements[i].style.display = "none";
+            slideElements[currentSlide - 1].style.display = "block";
+        }
+    </script>
+    <br/>
+    <div id="ContentWrapper">
+        <div id="ContentHeader">
+            The Point Room Bookings
+        </div>
+        <br/>
+        <a href="./enquire.html" class="Button">
+            Enquire about a meeting room &#10095;
+        </a>
+        <br/>
+        <br/>
+        <div id="ContentBody">
+            <br/>
+            <div class="ContentText">
+                <p>The Point’s creative environment and flexible spaces has seen it host international conferences, national events, regional networking and training events for organisations as diverse as the Police, Health Service, European Programme and
+                    the BBC’s Question Time.</p>
+
+                <p class="ContentSubHeadder">Main Auditorium</p>
+
+                <p>The main auditorium offers flexible seating which allows you to either flat floor the space with tables and chairs for up to 110 or offer tiered theatre seating for up to 312 delegates, making it the perfect space for a conference or even
+                    a dinner and dance. </p>
+
+                <p>A range of audio visual equipment can be provided including projection capability and professional theatre lighting and sound can be used to meet your needs when using the theatre. This space is fully accessible.</p>
+
+                <p>The stage area is a maximum width of 12.5m, maximum depth of 10.1m, maximum proscenium opening of 10.4m, maximum working height of 6m.</p>
+
+                <p>The auditorium measures 13.5m by 15.5m.</p>
+                <hr/>
+                <p class="ContentSubHeadder">The Studio Theatre </p>
+
+                <p>The intimate Studio Theatre can accommodate up to 50 people theatre style or 20 people classroom style. This space is perfect for meetings, presentations, receptions, smaller conferences and small, informal performances.</p>
+
+                <p>Wireless internet access is available in the Studio Theatre, as well as a range of audio visual equipment including projection capability, professional theatre lighting and sound. This space is also fully accessible and has ample natural
+                    light and a black-out facility.</p>
+
+                <p>Our wonderful Cafe Bar can provide various catering options to meet your requirements including refreshments, hot and cold buffets and canapés.</p>
+
+                <p>The Studio Theatre measures 8m by 8m.</p>
+
+                <hr>
+
+                <p class="ContentSubHeadder">The Conference Room</p>
+
+                <p>The Point’s bright and spacious Conference Room can accommodate up to 40 people in theatre style or 25 people in boardroom configuration.</p>
+
+                <p>Wireless internet access is available in the Conference Room, as well as a range of audio visual equipment including projection capability. This meeting room is also fully accessible and has ample natural light and a black-out facility.
+                    The Point also has a stunning roof terrace that overlooks the park, providing the perfect break-out area to the Conference Room and a delightful entertaining space.</p>
+
+                <p>Our wonderful Cafe Bar can provide various catering options to meet your requirements including refreshments, hot and cold buffets and canapés.</p>
+
+                <p>The Conference Room measures 6.5m by 6.5m.</p>
+
+                <hr/>
+
+                <p class="ContentSubHeadder">The Irving Room</p>
+
+                <p>The comfortable Irving Room can accommodate meetings of up to 30 people in theatre style or 20 boardroom configuration.</p>
+
+                <p>Wireless internet access is available in the Irving Room, as well as a range of audio visual equipment including projection capability. This meeting room is also fully accessible and has ample natural light.</p>
+
+                <p>Our wonderful Cafe Bar can provide various catering options to meet your requirements including refreshments, hot and cold buffets and canapés.</p>
+
+                <p>The Irving Room measures 7.5m by 4.5m.</p>
+            </div>
+            <br/>
+            <hr/>
+            <br/>
+        </div>
+    </div>
+    <div id="Footer">
+        <div id="FooterWrapper">
+            <div id="FooterLinks">
+                <section>
+                    <h2>Eastleigh Borough Council, Eastleigh House, Upper Market Street, Eastleigh, SO50 9YN</h2>
+                </section>
+                <section>
+                    <h3>Telephone: <a href="tel:02380688000">02380688000</a></h3>
+                </section>
+                <section>
+                    <h3>
+                        <a href="https://eastleigh.gov.uk/jobs">Jobs</a>
+                        <a href="https://eastleigh.gov.uk/your-weekly-borough-news">Newsletter</a>
+                        <a href="https://eastleigh.gov.uk/privacy">Privacy</a>
+                        <a href="https://eastleigh.gov.uk/cookies">Cookies</a>
+                        <a href="https://eastleigh.gov.uk/feedback">Feedback</a>
+                        <a href="https://eastleigh.gov.uk/contact">Contact</a>
+                    </h3>
+                </section>
+            </div>
+            <div id="Copyright">
+                <section>
+                    <a href="/">
+                        <img src="../../img/Eastleigh_black_trans.png" alt="Eastleigh Logo" class="EastleighLogo">
+                    </a>
+                    <h3>© Copyright 2019 Eastleigh Borough Council</h3>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

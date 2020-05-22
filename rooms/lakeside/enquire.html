@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lakeside Enquiry</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<body>
+    <div id="HeaderWrapper">
+        <div id="HeaderTop">
+            <a href="../../index.html">
+                <img src="../../img/Eastleigh_white_trans.png" alt="Eastleigh Logo" class="EastleighLogo">
+            </a>
+        </div>
+        <div id="HeaderMenu">
+            <div id="MenuWrapper">
+                <ul id="Menu">
+                    <li class="MenuItem" id="ActiveItem">
+                        <a href="../lakeside/viewing.html">Lakeside Centre</a>
+                    </li>
+                    <li class="MenuItem">
+                        <a href="../ivcp/viewing.html">Itchen Valley Country Park</a>
+                    </li>
+                    <li class="MenuItem">
+                        <a href="../thepoint/viewing.html">The Point</a>
+                    </li>
+                    <li class="MenuItem">
+                        <a href="../berrytheatre/viewing.html">Berry Theatre</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <div id="Form">
+        <form name="enquiryForm">
+            <div id="ContentHeader">Enquire about a meeting room booking at Lakeside</div>
+            <hr>
+            <label for="FirstNameField">First Name:</label>
+            <br/>
+            <input type="text" name="First Name" id="FirstNameField" required>
+            <br/>
+            <br/>
+            <label for="LastNameField">Last Name:</label>
+            <br/>
+            <input type="text" name="Last Name" id="LastNameField" required>
+            <br/>
+            <br/>
+            <label for="EmailField">Email:</label>
+            <br/>
+            <input type="email" name="Email" id="EmailField" required>
+            <br/>
+            <br/>
+            <label for="DateField">Date of booking:</label>
+            <br/>
+            <input type="date" name="Date of booking" id="DateField" required>
+            <br/>
+            <br/>
+            <label for="EnquiryMessage">Enquiry Message:</label>
+            <br/>
+            <textarea name="Enquiry Message" id="EnquiryMessage" cols="30" rows="10" required></textarea>
+            <br/>
+        </form>
+        <button class="Button" id="EnquirySubmit" onclick="return FormSubmitted();">Submit Enquiry</button>
+    </div>
+    <script>
+        function FormSubmitted() {
+            let formAttributes = document.forms["enquiryForm"];
+            let unfilledAttributes = "";
+            for (let i = 0; i < formAttributes.length; i++) {
+                const element = formAttributes[i];
+                if (!element.checkValidity()) {
+                    if (unfilledAttributes == "") {
+                        unfilledAttributes = element.name;
+                    } else {
+                        unfilledAttributes += `, ${element.name}`;
+                    }
+                }
+            }
+            if (unfilledAttributes != "") {
+                return swal({
+                    title: 'Missing fields!',
+                    text: `The following fields must have data in them: ${unfilledAttributes}`,
+                    icon: 'error'
+                });
+            }
+            swal({
+                title: 'Form Submitted!',
+                text: 'Your enquiry request has been submited, please check your email for a response about booking times and availability.',
+                icon: 'success'
+            });
+            return true;
+        }
+    </script>
+    <br/>
+    <br/>
+    <div id="Footer">
+        <div id="FooterWrapper">
+            <div id="FooterLinks">
+                <section>
+                    <h2>Eastleigh Borough Council, Eastleigh House, Upper Market Street, Eastleigh, SO50 9YN</h2>
+                </section>
+                <section>
+                    <h3>Telephone: <a href="tel:02380688000">02380688000</a></h3>
+                </section>
+                <section>
+                    <h3>
+                        <a href="https://eastleigh.gov.uk/jobs">Jobs</a>
+                        <a href="https://eastleigh.gov.uk/your-weekly-borough-news">Newsletter</a>
+                        <a href="https://eastleigh.gov.uk/privacy">Privacy</a>
+                        <a href="https://eastleigh.gov.uk/cookies">Cookies</a>
+                        <a href="https://eastleigh.gov.uk/feedback">Feedback</a>
+                        <a href="https://eastleigh.gov.uk/contact">Contact</a>
+                    </h3>
+                </section>
+            </div>
+            <div id="Copyright">
+                <section>
+                    <a href="/">
+                        <img src="../../img/Eastleigh_black_trans.png" alt="Eastleigh Logo" class="EastleighLogo">
+                    </a>
+                    <h3>© Copyright 2019 Eastleigh Borough Council</h3>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

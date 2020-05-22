@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Itchen Valley Bookings</title>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+
+<body>
+    <div id="HeaderWrapper">
+        <div id="HeaderTop">
+            <a href="../../index.html">
+                <img src="../../img/Eastleigh_white_trans.png" alt="Eastleigh Logo" class="EastleighLogo">
+            </a>
+        </div>
+        <div id="HeaderMenu">
+            <div id="MenuWrapper">
+                <ul id="Menu">
+                    <li class="MenuItem">
+                        <a href="../lakeside/viewing.html">Lakeside Centre</a>
+                    </li>
+                    <li class="MenuItem" id="ActiveItem">
+                        <a href="../ivcp/viewing.html">Itchen Valley Country Park</a>
+                    </li>
+                    <li class="MenuItem">
+                        <a href="../thepoint/viewing.html">The Point</a>
+                    </li>
+                    <li class="MenuItem">
+                        <a href="../berrytheatre/viewing.html">Berry Theatre</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="Body">
+        <div id="SlideshowWrapper">
+            <div class="Slide">
+                <img src="../../img/slideshows/ivcp/1.jpg" alt="Slideshow Image 1">
+            </div>
+            <div class="Slide">
+                <img src="../../img/slideshows/ivcp/2.jpg" alt="Slideshow Image 2">
+            </div>
+        </div>
+        <a class="previous" onclick="showSlide(-1)">&#10094;</a>
+        <a class="next" onclick="showSlide(1)">&#10095;</a>
+    </div>
+    <script>
+        var currentSlide = 1;
+        showSlide(0);
+
+        function showSlide(n) {
+            currentSlide = currentSlide + n;
+            var slideElements = document.getElementsByClassName("Slide");
+            if (currentSlide > slideElements.length) currentSlide = 1
+            else if (currentSlide < 1) currentSlide = slideElements.length;
+            for (i = 0; i < slideElements.length; i++) slideElements[i].style.display = "none";
+            slideElements[currentSlide - 1].style.display = "block";
+        }
+    </script>
+    <br/>
+    <div id="ContentWrapper">
+
+        <div id="ContentHeader">
+            Itchen Valley Country Park Bookings
+        </div>
+        <br/>
+        <a href="./enquire.html" class="Button">
+            Enquire about a meeting room &#10095;
+        </a>
+        <br/>
+        <br/>
+        <div id="ContentBody">
+            <p>The meeting room within Kingfisher Barn is five metres by seven and a half metres in size, equipped with a projector, screen, whiteboard and flipchart and can accommodate approximately:</p>
+            <p>• 17 delegates horse-shoe style arrangement</p>
+            <p>• 20 delegates boardroom style arrangement</p>
+            <p>• 20 delegates cabaret style arrangement</p>
+            <p>• 28 delegates theatre style arrangement</p>
+            <p>The venue is available for bookings from Monday to Friday between 8am and 5.30pm (11am - 4pm during school holidays)</p>
+            <br/>
+            <p class="ContentSubHeadder">Costs (all prices are exclusive of VAT) Room hire half day (4 hours): </p>
+            <p>Room hire half day (4 hours): £70</p>
+            <p>Room hire full day: £120</p>
+            <p>Tea, coffee: £1.30 per serving</p>
+            <p>Tea, coffee, biscuits: £1.80 per serving</p>
+            <p>Hot and cold buffet lunches to pre-order: from £6.50 per person</p>
+            <p>We also have BBQs outside the barn for hire: from £47.50</p>
+            <br/>
+            <hr/>
+            <br/>
+        </div>
+    </div>
+    <div id="Footer">
+        <div id="FooterWrapper">
+            <div id="FooterLinks">
+                <section>
+                    <h2>Eastleigh Borough Council, Eastleigh House, Upper Market Street, Eastleigh, SO50 9YN</h2>
+                </section>
+                <section>
+                    <h3>Telephone: <a href="tel:02380688000">02380688000</a></h3>
+                </section>
+                <section>
+                    <h3>
+                        <a href="https://eastleigh.gov.uk/jobs">Jobs</a>
+                        <a href="https://eastleigh.gov.uk/your-weekly-borough-news">Newsletter</a>
+                        <a href="https://eastleigh.gov.uk/privacy">Privacy</a>
+                        <a href="https://eastleigh.gov.uk/cookies">Cookies</a>
+                        <a href="https://eastleigh.gov.uk/feedback">Feedback</a>
+                        <a href="https://eastleigh.gov.uk/contact">Contact</a>
+                    </h3>
+                </section>
+            </div>
+            <div id="Copyright">
+                <section>
+                    <a href="/">
+                        <img src="../../img/Eastleigh_black_trans.png" alt="Eastleigh Logo" class="EastleighLogo">
+                    </a>
+                    <h3>© Copyright 2019 Eastleigh Borough Council</h3>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
